@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Play:wght@700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css" integrity="sha512-KRrxEp/6rgIme11XXeYvYRYY/x6XPGwk0RsIC6PyMRc072vj2tcjBzFmn939xzjeDhj0aDO7TDMd7Rbz3OEuBQ==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
     
     <title>Netflix Film Önerisi</title>
@@ -21,39 +22,115 @@
             <img src="vectors/gozluk.png" class="gozluk" alt="">
             <h1>Ne aradığını bilenlere</h1>
         </header>
-        
-        <div class="row">
-            <div class="col s12">
+                    
+        <div class="container">
+
+            <section id="first">
                 <div class="platform__choice">
-                    <img src="https://img.icons8.com/color/280/000000/netflix.png" class="platform__cursor_hoverable" data-color='#c62828'/>
-                    <h1 class="platform__cursor_hoverable" data-color='#42a5f5'>INTERNET</h1>
+                    <h1 class="center">Aradığın filmi hangi platform üzerinden izleyeceksin?</h1>
+
+                    <img src="https://img.icons8.com/color/280/000000/netflix.png" class="platform__cursor_hoverable" data-color='#eb2925' data-value='netflix' />
+                    <h1 class="platform__cursor_hoverable" style="padding: 3rem;" data-color='#42a5f5' data-value='' >INTERNET</h1>
 
                     <div class="platform_cursor"></div>
                 </div>
+            </section>
 
-                <div class="container hide">
-                    <img class="film__genre" src="https://img.icons8.com/officel/80/000000/film-noir.png"/>
-                    <img class="film__genre" src="https://img.icons8.com/officel/80/000000/comedy.png"/>
-                    <img class="film__genre" src="https://img.icons8.com/officel/80/000000/predator.png"/>
-                    <img class="film__genre" src="https://img.icons8.com/officel/80/000000/animation.png"/>
-                    <img class="film__genre" src="https://img.icons8.com/officel/80/000000/action2--v2.png"/>
-                    <img class="film__genre" src="https://img.icons8.com/officel/80/000000/sonic-screwdriver.png"/>
-                    <img class="film__genre" src="https://img.icons8.com/officel/80/000000/horror.png"/>
-                    <img class="film__genre" src="https://img.icons8.com/officel/80/000000/crime.png"/>
-                    <img class="film__genre" src="https://img.icons8.com/officel/80/000000/tank.png"/>
-                    <img class="film__genre" src="https://img.icons8.com/officel/80/000000/harry-potter-.png"/>
+            <section class="center" id="second">
+                <div class="row">
+                    <h1>Hangi türde bir film izlemek istersin?</h1>
+                    <div class="col s12">
+                        <div class="television_container">
+                            <img src="vectors/televizyon.png" class="televizyon" alt="">
+                        
+                            <div class="film__genre_background">
+                                <img src="" class="film__genre_bg_image" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12">
+                        <div class="film__genre_section">
+                            <img class="film__genre" data-value='' data-src="images/film-noir.jpg"  src="https://img.icons8.com/officel/56/000000/film-noir.png"/>
+                            <img class="film__genre" data-value='' data-src="images/comedy.jpg" src="https://img.icons8.com/officel/56/000000/comedy.png"/>
+                            <img class="film__genre" data-value='' data-src="images/animation.jpg" src="https://img.icons8.com/officel/56/000000/animation.png"/>
+                            <img class="film__genre" data-value='' data-src="images/action.jpg" src="https://img.icons8.com/officel/56/000000/action2--v2.png"/>
+                            <img class="film__genre" data-value='' data-src="images/sci-fi.jpg" src="https://img.icons8.com/officel/56/000000/sonic-screwdriver.png"/>
+                            <img class="film__genre" data-value='' data-src="images/horror.jpg" src="https://img.icons8.com/officel/56/000000/horror.png"/>
+                            <img class="film__genre" data-value='' data-src="images/crime.jpg" src="https://img.icons8.com/officel/56/000000/crime.png"/>
+                            <img class="film__genre" data-value='' data-src="images/war.jpg" src="https://img.icons8.com/officel/56/000000/tank.png"/>
+                            <img class="film__genre" data-value='' data-src="images/fantastic.jpg" src="https://img.icons8.com/officel/56/000000/harry-potter-.png"/>
+                            <img class="film__genre" data-value='' data-src="images/adventure.jpg" src="https://img.icons8.com/officel/56/000000/hot-air-balloon.png" />
+                            <img class="film__genre" data-value='' data-src="images/romantic.jpg" src="https://img.icons8.com/officel/56/000000/heart-balloon.png"/>
+                            <img class="film__genre" data-value='' data-src="images/western.jpg" src="https://img.icons8.com/officel/56/000000/western.png"/>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col s12 m6 television_container hide">
-                <img src="vectors/televizyon.png" class="televizyon responsive-img" alt="">
-            </div>
+            </section>
+
+            <section class="center" id="third">
+                <h1 style="margin-bottom: 3rem;">Orjinal dil seçimi yapın</h1>
+                <div class="row">
+                    <div class="col s12 m4">
+                        <h2 data-value='tr' class="language">TÜRKÇE</h2>
+                    </div>
+                    <div class="col s12 m4">
+                        <h2 data-value='en' class="language">ENGLISH</h2>
+                    </div>
+                    <div class="col s12 m4">
+                        <h2 data-value='fr' class="language">FRANÇAIS</h2>
+                    </div>
+                    <div class="col s12 m4">
+                        <h2 data-value='de' class="language">DEUTSCHE</h2>
+                    </div>
+                    <div class="col s12 m4">
+                        <h2 data-value='ru' class="language">РУССКИЙ</h2>
+                    </div>
+                    <div class="col s12 m4">
+                        <h2 data-value='' class="language">KOREAN</h2>
+                    </div>
+                    <div class="col s12 m4">
+                        <h2 data-value='' class="language">ESPAÑOL</h2>
+                    </div>
+                    <div class="col s12 m4">
+                        <h2 data-value='' class="language">ITALIANO</h2>
+                    </div>
+                    <div class="col s12 m4">
+                        <h2 data-value='' class="language">JAPANESE</h2>
+                    </div>
+                </div>
+            </section>
+
+            <section class="score__section" id="fourth">
+                    
+                <div class="score__section_bg">
+                    <img src="vectors/cinema.jpg" alt="">
+                </div>
+
+                <div class="row">
+                    <h1 class="black-text">Son Düzenlemeler</h1>
+                    <div class="col s12 m4">
+                        <h2>Netflix</h2>
+                        <h2>Aksiyon</h2>
+                        <h2>English</h2>
+                    </div>
+                    <div class="col s12 m8 center">
+                        <h2 class="black-text left-align">Film puanı: <span class="score__slider_value"></span></h2>
+                        <h6 class="left-align black-text" style="transform: translateY(-1rem); opacity: .4;">Şuanda alt değer aralığını seçmektesiniz.</h6>
+                        <div class="score__slider"></div>
+                        <button class="btn waves-effect waves-yellow search_button">Filmi Ara</button>
+                    </div>
+                </div>
+
+            </section>
+
         </div>
-            
+
     </main>
     
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js" integrity="sha512-EnXkkBUGl2gBm/EIZEgwWpQNavsnBbeMtjklwAa7jLj60mJk932aqzXFmdPKCG6ge/i8iOCK0Uwl1Qp+S0zowg==" crossorigin="anonymous"></script>
     <script src="app.js"></script>
 </body>
 </html>
