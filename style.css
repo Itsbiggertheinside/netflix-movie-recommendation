@@ -1,4 +1,4 @@
-body { color: #302f2f; }
+body { color: #302f2f; background-color: #ffee58; }
 header { display: flex; }
 
 .gozluk { width: 98px; height: 98px; transform: translateY(15%); }
@@ -7,3 +7,31 @@ header { display: flex; }
 
 .film__genre { padding: 1.5rem; cursor: pointer; transition: filter .2s, transform .2s; }
 .film__genre:hover { filter: drop-shadow(.1rem .1rem .2rem #000000); transform: translateY(-5%); }
+
+
+
+/* -------------------------------------------------------------------------------------------------- */
+
+.platform__choice { letter-spacing: .4rem; display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; font-family: 'Anton', sans-serif; }
+
+.platform_cursor {
+    width: 120px;
+    height: 120px;
+    background-color: rgba(240, 248, 255, 0.833);
+    border-radius: 50%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%) scale(0);
+    pointer-events: none;
+    transition: transform .4s;
+}
+
+.platform__cursor_hoverable {
+    cursor: default;
+    z-index: 1;
+}
+
+.platform__cursor_hoverable:hover ~ .platform_cursor {
+    transform: translate(-50%, -50%) scale(3);
+}

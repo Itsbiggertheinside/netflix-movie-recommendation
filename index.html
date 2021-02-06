@@ -5,23 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
     
     <title>Netflix Film Önerisi</title>
 </head>
-<body class="yellow lighten-1">
+<body>
                 
     <main>
 
-        <header>
+        <header class="hide">
             <img src="vectors/gozluk.png" class="gozluk" alt="">
-            <h2>Ne aradığını bilenlere</h2>
+            <h1>Ne aradığını bilenlere</h1>
         </header>
         
         <div class="row">
             <div class="col s12">
-                <div class="container">
+                <div class="platform__choice">
+                    <img src="https://img.icons8.com/color/280/000000/netflix.png" class="platform__cursor_hoverable" data-color='#c62828'/>
+                    <h1 class="platform__cursor_hoverable" data-color='#42a5f5'>INTERNET</h1>
+
+                    <div class="platform_cursor"></div>
+                </div>
+
+                <div class="container hide">
                     <img class="film__genre" src="https://img.icons8.com/officel/80/000000/film-noir.png"/>
                     <img class="film__genre" src="https://img.icons8.com/officel/80/000000/comedy.png"/>
                     <img class="film__genre" src="https://img.icons8.com/officel/80/000000/predator.png"/>
@@ -44,5 +54,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
