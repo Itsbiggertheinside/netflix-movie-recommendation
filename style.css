@@ -1,0 +1,17 @@
+nav {
+    background-color: #1130404d;
+}
+.nav-wrapper .brand-logo {
+    width: 64px;
+    height: 64px;
+    position: relative;
+}
+
+body {
+    background-image: linear-gradient(to right top, #05090f, #060b12, #070c15, #080e17, #090f19, #0a101a, #0b111c, #0c121d, #0c131e, #0d141f, #0d1420, #0d1521);
+    color: whitesmoke;
+}
+
+.film__search .card {
+    background-color: #0000003f;
+}
