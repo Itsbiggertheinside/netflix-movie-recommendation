@@ -15,17 +15,19 @@
 
     <header>
         <div class="row">
-            <div class="col s12 m6">
-                <img src="vectors/header.png" class="responsive-img" alt="">
-            </div>
-            <div class="col s12 m6">
-                <h2>Ben ne izleyeceğim derdine son!</h2>
+            <div class="valign-wrapper">
+                <div class="col s12 m6">
+                    <img src="vectors/header.png" class="responsive-img" />
+                </div>
+                <div class="col s12 m6">
+                    <h1 class="header__item">Ben ne izleyeceğim derdine son!</h1>
+                    <h3 class="header__item">Tabi ki ne aradığını bilenler için.</h3>
+                </div>
             </div>
         </div>
     </header>
                 
     <main>
-
 
         <section class="film__search">
             <div class="container">
@@ -33,13 +35,112 @@
                     <div class="card-content">
                         <div class="row">
                             <div class="col s12 m6">
-                                <p>Filmin türü: </p>
-                                <p>Filmin türü: </p>
-                                <p>Filmin türü: </p>
-                                <p>Filmin türü: </p>
+                                
+                                <div class="select_box">
+                                    <div class="select_box__selected">
+                                        <span>Platform Seçimi Yapın</span>
+                                        <span><img src="vectors/icons8-chevron-down-48.png" class="select_box__selected__icon" alt=""></span>
+                                    </div>
+                                    <div class="select_box__option_container">
+                                        <div class="select_box__option">
+                                            <span>Netflix</span>
+                                        </div>
+                                        <div class="select_box__option">
+                                            <span>İnternet</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="select_box">
+                                    <div class="select_box__selected">
+                                        <span>Tür Seçimi Yapın</span>
+                                        <span><img src="vectors/icons8-chevron-down-48.png" class="select_box__selected__icon" alt=""></span>
+                                    </div>
+                                    <div class="select_box__option_container">
+                                        <div class="select_box__option">
+                                            <span>Aksiyon</span>
+                                        </div>
+                                        <div class="select_box__option">
+                                            <span>Animasyon</span>
+                                        </div>
+                                        <div class="select_box__option">
+                                            <span>Bilim Kurgu</span>
+                                        </div>
+                                        <div class="select_box__option">
+                                            <span>Fantastik</span>
+                                        </div>
+                                        <div class="select_box__option">
+                                            <span>Gizem / Dedektiflik</span>
+                                        </div>
+                                        <div class="select_box__option">
+                                            <span>Komedi</span>
+                                        </div>
+                                        <div class="select_box__option">
+                                            <span>Korku / Gerilim</span>
+                                        </div>
+                                        <div class="select_box__option">
+                                            <span>Macera</span>
+                                        </div>
+                                        <div class="select_box__option">
+                                            <span>Romantik</span>
+                                        </div>
+                                        <div class="select_box__option">
+                                            <span>Savaş</span>
+                                        </div>
+                                        <div class="select_box__option">
+                                            <span>Suç</span>
+                                        </div>
+                                        <div class="select_box__option">
+                                            <span>Vahşi Batı</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="select_box">
+                                    <div class="select_box__selected">
+                                        <span>Orjinal Dil Seçimi Yapın</span>
+                                        <span><img src="vectors/icons8-chevron-down-48.png" class="select_box__selected__icon" alt=""></span>
+                                    </div>
+                                    <div class="select_box__option_container">
+                                        <div class="select_box__option">
+                                            <span>İngilizce</span>
+                                        </div>
+                                        <div class="select_box__option">
+                                            <span>Türkçe</span>
+                                        </div>
+                                        <div class="select_box__option">
+                                            <span>Fransızca</span>
+                                        </div>
+                                        <div class="select_box__option">
+                                            <span>Almanca</span>
+                                        </div>
+                                        <div class="select_box__option">
+                                            <span>Rusça</span>
+                                        </div>
+                                        <div class="select_box__option">
+                                            <span>Korece</span>
+                                        </div>
+                                        <div class="select_box__option">
+                                            <span>İtalyanca</span>
+                                        </div>
+                                        <div class="select_box__option">
+                                            <span>İspanyolca</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="score">
+                                    <b><p>Filmin puanı: <span id="score__slider_value"></span></p></b>
+                                    <small>Şuanda alt değer aralığını seçmektesiniz</small>
+                                    <br><br>
+                                    <div id="score__slider"></div>
+                                </div>
+
                             </div>
-                            <div class="col s12 m6">
+                            <div class="col s12 m6 television__container center">
                                 <img src="vectors/televizyon.png" class="responsive-img" alt="">
+                                <button class="btn waves-effect waves-lighten television_button">Ara</button>
+                                <button class="btn waves-effect waves-lighten television_button">Değiştir</button>
                             </div>
                         </div>
                     </div>
