@@ -16,9 +16,9 @@ $(platform).on('mouseenter', function() {
 
 $(platform).on('mouseleave', function() {
     $('body').css({
-        'background': 'linear-gradient(to right bottom, #ffee58, #ffe452, #ffda4e, #ffd14a, #ffc747)', 
+        'background': 'linear-gradient(to top, #00153d, #002a53, #004167, #005879, #006f88, #00778e, #007f94, #008799, #00829b, #007c9b, #00779c, #00719b)', 
         'background-size': '100% 150%',
-        'color': '#302f2f'
+        'color': 'whitesmoke'
     });
 });
 
@@ -66,11 +66,11 @@ $('.platform__cursor_hoverable').on('click', function() {
 
 $('.film__genre').on('click', function() {
     
-    $('body').css({
-        'background': 'linear-gradient(to right bottom, #6bcf5c, #6ad45a, #68d957, #67de55, #65e352) no-repeat',
-        'background-size': '100% 150%',
-        'color': 'white'
-    });
+    // $('body').css({
+    //     'background': 'linear-gradient(to right bottom, #6bcf5c, #6ad45a, #68d957, #67de55, #65e352) no-repeat',
+    //     'background-size': '100% 150%',
+    //     'color': 'white'
+    // });
 
     $('#second').css('display', 'none');
     $('#third').css('display', 'block');
@@ -78,11 +78,11 @@ $('.film__genre').on('click', function() {
 
 $('.language').on('click', function() {
 
-    $('body').css({
-        'background': 'white',
-        'background-size': '100% 150%',
-        'color': 'white'
-    });
+    // $('body').css({
+    //     'background': 'white',
+    //     'background-size': '100% 150%',
+    //     'color': 'white'
+    // });
 
     $('#third').css('display', 'none');
     $('#fourth').css('display', 'block');

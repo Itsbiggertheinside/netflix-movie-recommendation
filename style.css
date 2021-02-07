@@ -1,9 +1,9 @@
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: linear-gradient(to right bottom, #ffee58, #ffe452, #ffda4e, #ffd14a, #ffc747); }
+::-webkit-scrollbar-track { background: linear-gradient(to top, #00153d, #002a53, #004167, #005879, #006f88, #00778e, #007f94, #008799, #00829b, #007c9b, #00779c, #00719b); }
 ::-webkit-scrollbar-thumb { background: #e53835a8; }
 ::-webkit-scrollbar-thumb:hover { background: #ff3734; }
 
-body { color: #302f2f; background: linear-gradient(to right bottom, #ffee58, #ffe452, #ffda4e, #ffd14a, #ffc747); background-size: 100% 150%; }
+body { color: whitesmoke; background: linear-gradient(to top, #00153d, #002a53, #004167, #005879, #006f88, #00778e, #007f94, #008799, #00829b, #007c9b, #00779c, #00719b); background-size: 100% 150%; }
 header { display: flex; }
 h1 { font-family: 'Anton', sans-serif; }
 h2 { font-family: 'Play', sans-serif; }
@@ -48,6 +48,7 @@ h2 { font-family: 'Play', sans-serif; }
 .television_container { 
     margin-left: auto;
     margin-right: auto;
+    margin-top: 2rem;
     width: fit-content;
     position: relative; 
 }
@@ -83,8 +84,7 @@ h2 { font-family: 'Play', sans-serif; }
 }
 
 .film__genre { 
-    margin-left: 5rem;
-    margin-bottom: 2rem;
+    margin: 2rem 2.5rem 0 2.5rem;
     cursor: pointer; 
     filter: drop-shadow(.1rem .1rem .2rem #000000); 
     transition: filter .2s, transform .2s; 
@@ -108,10 +108,25 @@ h2 { font-family: 'Play', sans-serif; }
     transform: scale(1.1);
 }
 
+.language__bg {
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.language__bg img {
+    width: 100%;
+    height: max-content;
+    object-fit: cover;
+    object-position: center;
+}
+
 /* -------------------------------------------------------------------------------------------------- */
 
 .noUi-connect {
-    background: #c20e00;
+    background: #00d0a0;
 }
 
 .score__section {
@@ -119,19 +134,19 @@ h2 { font-family: 'Play', sans-serif; }
 }
 
 .score__section, .score__slider_value {
-    color: #c20e00;
+    color: #006667;
 }
 
 .search_button {
     margin-top: 4rem;
     width: 50%;
-    background-color: #c20e00;
+    background-color: #006667;
 
     transition: background .3s;
 }
 
 .search_button:hover, .search_button:focus {
-    background-color: #eb2925;
+    background-color: #01ffc4;
 }
 
 .score__section_bg {
@@ -142,15 +157,21 @@ h2 { font-family: 'Play', sans-serif; }
 
 .score__section_bg img {
     position: fixed;
-    width: 140%;
-    height: 140%;
     top: 0;
     left: 0;
     object-fit: cover;
     object-position: center;
     z-index: -2;
     pointer-events: none;
-    transform: translateX(-14%);
+}
+
+.score__card {
+    padding: 5rem;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+}
+.card {
+    background-color: #00729b31;
 }
 
 /* -------------------------------- DISPLAYS -------------------------------- */
