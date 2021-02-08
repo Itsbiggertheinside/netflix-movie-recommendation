@@ -8,20 +8,10 @@ $(document).ready(() => {
         }, 500 * i);
     });
 
-    // Custom select box
-    $('.select_box__selected').on('click', function() {
-        let _this = $(this);
-        let _options = $(_this).closest('.select_box').find('.select_box__option_container');
-
-
-        $('.select_box__option_container').slideUp(120);
-        $(_options).slideDown(350);
-
-        // if ($(_options).css('display') == 'none') {
-        //     $(_options).css('display', 'block');
-        // } else {
-        //     $(_options).css('display', 'none');
-        // }
+    // Custom select box - Jquery Selectiric
+    $('select').selectric({
+        disableOnMobile: false,
+        nativeOnMobile: false,
     });
 
 });

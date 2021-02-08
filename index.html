@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css" integrity="sha512-KRrxEp/6rgIme11XXeYvYRYY/x6XPGwk0RsIC6PyMRc072vj2tcjBzFmn939xzjeDhj0aDO7TDMd7Rbz3OEuBQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="selectric.css">
     <link rel="stylesheet" href="style.css">
     
     <title>Netflix Film Önerisi</title>
@@ -35,99 +36,40 @@
                     <div class="card-content">
                         <div class="row">
                             <div class="col s12 m6">
-                                
-                                <div class="select_box">
-                                    <div class="select_box__selected">
-                                        <span>Platform Seçimi Yapın</span>
-                                        <span><img src="vectors/icons8-chevron-down-48.png" class="select_box__selected__icon" alt=""></span>
-                                    </div>
-                                    <div class="select_box__option_container">
-                                        <div class="select_box__option">
-                                            <span>Netflix</span>
-                                        </div>
-                                        <div class="select_box__option">
-                                            <span>İnternet</span>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="select_box">
-                                    <div class="select_box__selected">
-                                        <span>Tür Seçimi Yapın</span>
-                                        <span><img src="vectors/icons8-chevron-down-48.png" class="select_box__selected__icon" alt=""></span>
-                                    </div>
-                                    <div class="select_box__option_container">
-                                        <div class="select_box__option">
-                                            <span>Aksiyon</span>
-                                        </div>
-                                        <div class="select_box__option">
-                                            <span>Animasyon</span>
-                                        </div>
-                                        <div class="select_box__option">
-                                            <span>Bilim Kurgu</span>
-                                        </div>
-                                        <div class="select_box__option">
-                                            <span>Fantastik</span>
-                                        </div>
-                                        <div class="select_box__option">
-                                            <span>Gizem / Dedektiflik</span>
-                                        </div>
-                                        <div class="select_box__option">
-                                            <span>Komedi</span>
-                                        </div>
-                                        <div class="select_box__option">
-                                            <span>Korku / Gerilim</span>
-                                        </div>
-                                        <div class="select_box__option">
-                                            <span>Macera</span>
-                                        </div>
-                                        <div class="select_box__option">
-                                            <span>Romantik</span>
-                                        </div>
-                                        <div class="select_box__option">
-                                            <span>Savaş</span>
-                                        </div>
-                                        <div class="select_box__option">
-                                            <span>Suç</span>
-                                        </div>
-                                        <div class="select_box__option">
-                                            <span>Vahşi Batı</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                <select name="select__platform" id="select__platform">
+                                    <option value="">İzleyeceğiniz platformu belirtin</option>
+                                    <option value="internet">Farketmez</option>
+                                    <option value="netflix">Netflix</option>
+                                </select>
 
-                                <div class="select_box">
-                                    <div class="select_box__selected">
-                                        <span>Orjinal Dil Seçimi Yapın</span>
-                                        <span><img src="vectors/icons8-chevron-down-48.png" class="select_box__selected__icon" alt=""></span>
-                                    </div>
-                                    <div class="select_box__option_container">
-                                        <div class="select_box__option">
-                                            <span>İngilizce</span>
-                                        </div>
-                                        <div class="select_box__option">
-                                            <span>Türkçe</span>
-                                        </div>
-                                        <div class="select_box__option">
-                                            <span>Fransızca</span>
-                                        </div>
-                                        <div class="select_box__option">
-                                            <span>Almanca</span>
-                                        </div>
-                                        <div class="select_box__option">
-                                            <span>Rusça</span>
-                                        </div>
-                                        <div class="select_box__option">
-                                            <span>Korece</span>
-                                        </div>
-                                        <div class="select_box__option">
-                                            <span>İtalyanca</span>
-                                        </div>
-                                        <div class="select_box__option">
-                                            <span>İspanyolca</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                <select name="select__genre" id="select__genre">
+                                    <option value="">Hangi türde bir film arıyorsunuz</option>
+                                    <option value="action">Aksiyon</option>
+                                    <option value="animation">Animasyon</option>
+                                    <option value="sci-fi">Bilim kurgu</option>
+                                    <option value="fantastic">Fantastik</option>
+                                    <option value="gizem">Gizem / Dedektiflik</option>
+                                    <option value="comedy">Komedi</option>
+                                    <option value="horror">Korku / Gerilim</option>
+                                    <option value="adventure">Macera</option>
+                                    <option value="romantic">Romantik</option>
+                                    <option value="war">Savaş</option>
+                                    <option value="crime">Suç</option>
+                                    <option value="western">Vahşi Batı</option>
+                                </select>
+
+                                <select name="select__language" id="select__language">
+                                    <option value="">Orjinal dil seçimi yapın</option>
+                                    <option value="en-Us">İngilizce</option>
+                                    <option value="tr">Türkçe</option>
+                                    <option value="fr">Fransızca</option>
+                                    <option value="de">Almanca</option>
+                                    <option value="ru">Rusça</option>
+                                    <option value="korece">Korece</option>
+                                    <option value="italyanca">İtalyanca</option>
+                                    <option value="sp">İspanyolca</option>
+                                </select>
 
                                 <div class="score">
                                     <b><p>Filmin puanı: <span id="score__slider_value"></span></p></b>
@@ -152,8 +94,10 @@
     
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js" integrity="sha512-EnXkkBUGl2gBm/EIZEgwWpQNavsnBbeMtjklwAa7jLj60mJk932aqzXFmdPKCG6ge/i8iOCK0Uwl1Qp+S0zowg==" crossorigin="anonymous"></script>
+    <script src="jquery.selectric.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
