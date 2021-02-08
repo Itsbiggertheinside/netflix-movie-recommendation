@@ -19,6 +19,7 @@ header {
     height: 100%;
 }
 
+
 .selectric-wrapper {
     margin-bottom: 2rem;
 }
@@ -63,6 +64,11 @@ header {
     from { opacity: 0; transform: translateY(35%); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+
+[data-scroll] { transition: .4s; }
+[data-scroll='in'] { opacity: 1; transform: rotateX(0deg); }
+[data-scroll='out'] { opacity: 0; transform: rotateX(180deg); }
 
 
 /* MEDIA SCREENS */

@@ -17,6 +17,15 @@ $(document).ready(() => {
 });
 
 
+// ScrollOut js & Animate.css
+ScrollOut({
+
+    threshold: .5,
+    targets: '.scrollable',
+
+});
+
+
 // noUiSlider configurations
 let slider = document.getElementById('score__slider');
 let sliderValue = document.getElementById('score__slider_value');
