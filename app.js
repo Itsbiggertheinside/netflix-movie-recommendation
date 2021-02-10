@@ -35,6 +35,15 @@ $(document).ready(() => {
         $('#genre').val($('#select__genre').val());
         $('#language').val($('#select__language').val());
         $('#score').val($('#score__slider_value').text());
+
+        
+        $('header').addClass('hide');
+        $('#search_parameters').addClass('hide');
+        $('.television__container').removeClass('m6');
+        $('.television__container__tv').css({'width': '100%'});
+        $('.television__container__tv img').animate({
+            width: '100%'
+        }, 700);
     });
 
 });
