@@ -15,10 +15,15 @@ $(document).ready(() => {
     });
 
     // Television image
-    $('#select__genre option').on('mouseover', function() {
+    $('.selectric-wrapper:nth-child(2) .selectric-scroll li').on('mouseover', function() {
             let _this = $(this);
-            $('#television__container__tv__genre').attr('src', $(_this).attr('data-url'));
-            console.log('asdasd');
+            let _dataOwner = $(_this).closest('.selectric-wrapper').find('.selectric-hide-select option').get($(_this).attr('data-index'));
+            if ($(_dataOwner).attr('data-url') != '') {
+                $('#television__container__tv__genre').attr('src', $(_dataOwner).attr('data-url')).css('opacity', '1');
+            } else {
+                $('#television__container__tv__genre').css('opacity', '0');
+            }
+            console.log($(_dataOwner));
     });
     // }, function() {
     //         $('#television__container__tv__genre').attr('src', '');
