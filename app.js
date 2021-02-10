@@ -14,6 +14,24 @@ $(document).ready(() => {
         nativeOnMobile: false,
     });
 
+    // Television image
+    $('#select__genre option').on('mouseover', function() {
+            let _this = $(this);
+            $('#television__container__tv__genre').attr('src', $(_this).attr('data-url'));
+            console.log('asdasd');
+    });
+    // }, function() {
+    //         $('#television__container__tv__genre').attr('src', '');
+    // });
+
+    // Search form
+    $('#television_button__search').on('click', function() {
+        $('#platform').val($('#select__platform').val());
+        $('#genre').val($('#select__genre').val());
+        $('#language').val($('#select__language').val());
+        $('#score').val($('#score__slider_value').text());
+    });
+
 });
 
 
@@ -42,3 +60,5 @@ noUiSlider.create(slider, {
 slider.noUiSlider.on('update', function (value) {
     sliderValue.innerHTML = value;
 });
+
+

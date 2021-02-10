@@ -50,6 +50,23 @@ header {
     background-color: #824088;
 }
 
+.television__container__tv {
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+}
+
+#television__container__tv__genre {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 96%;
+    height: 90%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    object-position: center;
+}
+
 
 /* FOR ANIMATIONS */
 .header__item {
