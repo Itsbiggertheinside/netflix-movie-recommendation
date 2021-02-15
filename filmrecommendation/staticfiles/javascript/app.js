@@ -23,7 +23,6 @@ $(document).ready(() => {
             } else {
                 $('#television__container__tv__genre').css('opacity', '0');
             }
-            console.log($(_dataOwner));
     });
     // }, function() {
     //         $('#television__container__tv__genre').attr('src', '');

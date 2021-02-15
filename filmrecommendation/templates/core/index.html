@@ -35,7 +35,7 @@
                             <select name="select__genre" id="select__genre">
                                 <option data-url="">Hangi türde bir film arıyorsunuz</option>
                                 <option data-url="{% static 'images/action.jpg' %}" value="action">Aksiyon</option>
-                                <option data-url="{% static 'images' %}" value="animation">Animasyon</option>
+                                <option data-url="{% static 'images/animation.jpg' %}" value="animation">Animasyon</option>
                                 <option data-url="{% static 'images/sci-fi.jpg' %}" value="sci-fi">Bilim kurgu</option>
                                 <option data-url="{% static 'images/fantastic.jpg' %}" value="fantastic">Fantastik</option>
                                 <option data-url="{% static 'images/film-noir.jpg' %}" value="gizem">Gizem / Dedektiflik</option>
@@ -85,10 +85,7 @@
 
 </main>
 
-<form action="" hidden>
-    <input type="text" id="platform" />
-    <input type="text" id="genre" />
-    <input type="text" id="language" />
-    <input type="text" id="score" />
+<form action="" method="POST" hidden> {% csrf_token %}
+    {{ form.as_p }}
 </form>
 {% endblock content %}
