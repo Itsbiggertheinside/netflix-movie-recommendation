@@ -1,5 +1,5 @@
 from django.urls import path
-from core.views import RecommendedFilmView
+from .views import RecommendedFilmView
 
 urlpatterns = [
     

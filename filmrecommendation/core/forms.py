@@ -1,8 +1,14 @@
 from django import forms
+from .models import SearchParameters
 
-class FilmRecommendationForm(forms.Form):
+class FilmRecommendationForm(forms.ModelForm):
 
-    platform = forms.CharField(max_length=45, widget=forms.TextInput(attrs={'id': 'platform'}))
-    genre = forms.CharField(max_length=45, widget=forms.TextInput(attrs={'id': 'genre'}))
-    language = forms.CharField(max_length=45, widget=forms.TextInput(attrs={'id': 'language'}))
-    score = forms.IntegerField(min_value=0, max_value=10, widget=forms.TextInput(attrs={'id': 'score'}))
+    class Meta:
+        model = SearchParameters
+        fields = ('platform', 'genre', 'language', 'score', )
+        widgets = {
+            'platform': forms.TextInput(attrs={'id': 'platform'}),
+            'genre': forms.TextInput(attrs={'id': 'genre'}),
+            'language': forms.TextInput(attrs={'id': 'language'}),
+            'score': forms.TextInput(attrs={'id': 'score'}),
+        }

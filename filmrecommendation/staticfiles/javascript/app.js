@@ -35,6 +35,8 @@ $(document).ready(() => {
         $('#language').val($('#select__language').val());
         $('#score').val($('#score__slider_value').text());
 
+        $('#film-search-form').submit();
+
         
         $('header').addClass('hide');
         $('#search_parameters').addClass('hide');
