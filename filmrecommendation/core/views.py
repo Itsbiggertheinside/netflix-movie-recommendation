@@ -20,15 +20,20 @@ class RecommendedFilmView(FormView):
         return reverse('search-film-response', kwargs={'id': self.movie_search_id})
 
 
-class MovieResponseDetailView(View):
-        
-    def get(self, request, *args, **kwargs):
-        movie = get_object_or_404(SearchParameters, id=request.GET.get('id'))
+def movie_search_response(request, id=None):
+    movie = get_object_or_404(SearchParameters, id=id)
 
-        url = 'https://api.themoviedb.org/3/discover/movie?api_key='
-        api_key = '629b72f9bf534bf18273b2a0538fd108'
-        parameters = '&language=tr&with_watch_providers={0}&with_genres={1}&with_original_language={2}&vote_average.gte={3}'.format(movie.platform, movie.genre_id, movie.language, movie.score)
+    url = 'https://api.themoviedb.org/3/discover/movie?api_key='
+    api_key = '629b72f9bf534bf18273b2a0538fd108'
+    parameters = '&language=tr&sort_by=popularity.desc&with_watch_providers={0}&with_genres={1}&with_original_language={2}&vote_average.gte={3}' \
+                .format(movie.platform, movie.genre_id, movie.language, movie.score)
 
-        response = requests.get(url + api_key + parameters).json()
+    response_page1 = requests.get(url + api_key + parameters + '&page=1').json()
+    response_page2 = requests.get(url + api_key + parameters + '&page=2').json()
+    response_page3 = requests.get(url + api_key + parameters + '&page=3').json()
+    response_page4 = requests.get(url + api_key + parameters + '&page=4').json()
+    response_page5 = requests.get(url + api_key + parameters + '&page=5').json()
 
-        return render(request, 'core/response.html', {'response': response})
+    response = [response_page1, response_page2, response_page3, response_page4, response_page5]
+
+    return render(request, 'core/response.html', {'response': response})

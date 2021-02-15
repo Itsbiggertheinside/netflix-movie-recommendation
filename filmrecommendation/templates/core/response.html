@@ -1,9 +1,77 @@
 {% extends 'layout.html' %}
+{% load static %}
+{% load string_formatter %}
+
+
+{% block style %}
+<style>
+    .container {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+</style>
+{% endblock style %}
 
 {% block content %}
-
-    {% for movie in response %}
-        <p>{{ movie }}</p>
-    {% endfor %}
+    
+    <div class="container">
+        <h3>Bu film ilgini çekti mi?</h3>
+        <div class="card movie-response-card z-depth-2">
+            <div class="row">
+                <div class="col s12 m4">
+                    <img src="" id="movie__poster" class="responsive-img" style="width: 85%" />
+                </div>
+                <div class="col s12 m8">
+                    <h5>Filmin adı: </h5><span id="movie__title"></span>
+                    <h5>Filmin yayınlanma tarihi: </h5><span id="movie__release_date"></span>
+                    <h5>Filmin özeti: </h5><span id="movie__overview"></span>
+                    <h5>Filmin izleyici skoru: </h5><span id="movie__vote_average"></span>
+    
+                    <div class="movie-response-button-group">
+                        <button class="btn waves-effect waves-lighten" id="change_movie">Değiştir</button>
+                        <a href="{% url 'search-film' %}" class="btn waves-effect waves-lighten" id="search_again">Yeniden Ara</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock content %}
+
+{% block script %}
+<script>
+
+    let movie_list = []
+
+    {% for r in response %}
+        {% for movie in r.results %}
+            movie_list.push(
+                ["https://image.tmdb.org/t/p/w342{{ movie.poster_path }}", 
+                "{{ movie.title }}", 
+                "{{ movie.release_date }}", 
+                `{{ movie.overview|string_formatter }}`, 
+                "{{ movie.vote_average }}"]
+            );
+        {% endfor %}
+    {% endfor %}
+
+    getRandomMovie = movie_list[Math.floor(Math.random()*movie_list.length)];
+
+    $('#movie__poster').attr('src', getRandomMovie[0]);
+    $('#movie__title').text(getRandomMovie[1]);
+    $('#movie__release_date').text(getRandomMovie[2]);
+    $('#movie__overview').text(getRandomMovie[3]);
+    $('#movie__vote_average').text(getRandomMovie[4]);
+
+    $('#change_movie').on('click', () => {
+        getRandomMovie = movie_list[Math.floor(Math.random()*movie_list.length)];
+
+        $('#movie__poster').attr('src', getRandomMovie[0]);
+        $('#movie__title').text(getRandomMovie[1]);
+        $('#movie__release_date').text(getRandomMovie[2]);
+        $('#movie__overview').text(getRandomMovie[3]);
+        $('#movie__vote_average').text(getRandomMovie[4]);
+    });
+
+</script>
+{% endblock script %}

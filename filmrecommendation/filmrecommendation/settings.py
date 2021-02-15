@@ -66,6 +66,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'libraries': {
+                'string_formatter': 'core.templatetags.string_bug_fix',
+            }
         },
     },
 ]

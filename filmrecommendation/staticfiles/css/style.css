@@ -94,4 +94,34 @@ header {
     .container {
         width: 85%;
     }
+
+    .movie-response-button-group {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 1rem;
+    }
+}
+
+.movie-response-card {
+    background-color: #0b0909d7;
+    padding: 1.5rem;
+}
+
+.movie-response-button-group button, .movie-response-button-group a {
+    background-color: #c27ade;
+}
+
+.movie-response-button-group button:focus, .movie-response-button-group button:hover,
+.movie-response-button-group a:focus, .movie-response-button-group a:hover {
+    background-color: #b865da;
+}
+
+.movie-response-button-group {
+    display: block;
+    margin-top: 1.5rem;
+}
+.movie-response-button-group button, .movie-response-button-group a {
+    margin-bottom: .5rem;
+    width: 100%;
 }

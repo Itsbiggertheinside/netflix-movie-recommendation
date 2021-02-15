@@ -76,10 +76,6 @@
                             </div>
                             <button class="btn waves-effect waves-lighten television_button" id="television_button__search">Ara</button>
                             <button class="btn waves-effect waves-lighten television_button" id="television_button__change">Değiştir</button>
-
-                            {% for movie in movie_list %}
-                                <p>{{ movie }}</p>
-                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -97,20 +93,5 @@
 {% block script %}
 <script>
 
-    {% comment %} var csrf_token = '{{ csrf_token }}';
-
-    $('#film-search-form').on('submit', function() {
-
-        $.ajax({
-            url: '',
-            headers: { "X-CSRFToken": csrf_token },
-            method: 'post',
-            data: $('form').serialize(),
-            success: function(response) {
-                console.log(response)
-            }
-        });
-
-    }); {% endcomment %}
 </script>
 {% endblock script %}
