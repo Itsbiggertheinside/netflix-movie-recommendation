@@ -5,10 +5,10 @@ class FilmRecommendationForm(forms.ModelForm):
 
     class Meta:
         model = SearchParameters
-        fields = ('platform', 'genre', 'language', 'score', )
+        fields = ('platform', 'genre_id', 'language', 'score', )
         widgets = {
             'platform': forms.TextInput(attrs={'id': 'platform'}),
-            'genre': forms.TextInput(attrs={'id': 'genre'}),
+            'genre_id': forms.TextInput(attrs={'id': 'genre'}),
             'language': forms.TextInput(attrs={'id': 'language'}),
             'score': forms.TextInput(attrs={'id': 'score'}),
         }

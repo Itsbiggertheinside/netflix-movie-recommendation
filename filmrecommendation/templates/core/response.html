@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+    {% for movie in response %}
+        <p>{{ movie }}</p>
+    {% endfor %}
+
+{% endblock content %}

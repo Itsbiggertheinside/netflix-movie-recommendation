@@ -76,4 +76,3 @@ slider.noUiSlider.on('update', function (value) {
     sliderValue.innerHTML = value;
 });
 
-
