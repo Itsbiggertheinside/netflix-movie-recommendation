@@ -1,0 +1,94 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<header>
+    <div class="row">
+        <div class="valign-wrapper">
+            <div class="col s12 m6">
+                <img src="{% static 'vectors/header.png' %}" class="responsive-img scrollable" />
+            </div>
+            <div class="col s12 m6">
+                <h1 class="header__item">Ben ne izleyeceğim derdine son!</h1>
+                <h3 class="header__item">Tabi ki ne aradığını bilenler için.</h3>
+            </div>
+        </div>
+    </div>
+</header>
+            
+<main>
+
+    <section class="film__search">
+        <div class="container">
+            <h1 class="center">Film Arama</h1>
+            <div class="card">
+                <div class="card-content">
+                    <div class="row">
+                        <div class="col s12 m6" id="search_parameters">
+
+                            <select name="select__platform" id="select__platform">
+                                <option value="">İzleyeceğiniz platformu belirtin</option>
+                                <option value="internet">Farketmez</option>
+                                <option value="netflix">Netflix</option>
+                            </select>
+
+                            <select name="select__genre" id="select__genre">
+                                <option data-url="">Hangi türde bir film arıyorsunuz</option>
+                                <option data-url="{% static 'images/action.jpg' %}" value="action">Aksiyon</option>
+                                <option data-url="{% static 'images' %}" value="animation">Animasyon</option>
+                                <option data-url="{% static 'images/sci-fi.jpg' %}" value="sci-fi">Bilim kurgu</option>
+                                <option data-url="{% static 'images/fantastic.jpg' %}" value="fantastic">Fantastik</option>
+                                <option data-url="{% static 'images/film-noir.jpg' %}" value="gizem">Gizem / Dedektiflik</option>
+                                <option data-url="{% static 'images/comedy.jpg' %}" value="comedy">Komedi</option>
+                                <option data-url="{% static 'images/horror.jpg' %}" value="horror">Korku / Gerilim</option>
+                                <option data-url="{% static 'images/adventure.jpg' %}" value="adventure">Macera</option>
+                                <option data-url="{% static 'images/romantic.jpg' %}" value="romantic">Romantik</option>
+                                <option data-url="{% static 'images/war.jpg' %}" value="war">Savaş</option>
+                                <option data-url="{% static 'images/crime.jpg' %}" value="crime">Suç</option>
+                                <option data-url="{% static 'images/western.jpg' %}" value="western">Vahşi Batı</option>
+                            </select>
+
+                            <select name="select__language" id="select__language">
+                                <option value="">Orjinal dil seçimi yapın</option>
+                                <option value="en-Us">İngilizce</option>
+                                <option value="tr">Türkçe</option>
+                                <option value="fr">Fransızca</option>
+                                <option value="de">Almanca</option>
+                                <option value="ru">Rusça</option>
+                                <option value="ko">Korece</option>
+                                <option value="no">Norveçce</option>
+                                <option value="it">İtalyanca</option>
+                                <option value="sp">İspanyolca</option>
+                            </select>
+
+                            <div class="score">
+                                <b><p>Filmin puanı: <span id="score__slider_value"></span></p></b>
+                                <small>Şuanda alt değer aralığını seçmektesiniz</small>
+                                <br><br>
+                                <div id="score__slider"></div>
+                            </div>
+
+                        </div>
+                        <div class="col s12 m6 television__container center">
+                            <div class="television__container__tv scrollable">
+                                <img src="{% static 'vectors/televizyon.png' %}" class="responsive-img" alt="">
+                                <img src="" class="responsive-img" id="television__container__tv__genre" alt="">
+                            </div>
+                            <button class="btn waves-effect waves-lighten television_button" id="television_button__search">Ara</button>
+                            <button class="btn waves-effect waves-lighten television_button" id="television_button__change">Değiştir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<form action="" hidden>
+    <input type="text" id="platform" />
+    <input type="text" id="genre" />
+    <input type="text" id="language" />
+    <input type="text" id="score" />
+</form>
+{% endblock content %}
